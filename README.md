@@ -12,3 +12,4 @@ This repository tracks weekly submissions for industrial training tasks.
 ## Current Submission
 
 - Week 1, Day 1: Initial portfolio website with core landing sections.
+- Week 1, Day 2: Personalized profile, real project data, and social links update.

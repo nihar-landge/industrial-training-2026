@@ -18,3 +18,10 @@
 ## Run Locally
 
 Open `src/index.html` in a browser.
+
+## Day 2 Update
+
+- Updated personal and academic profile details.
+- Added real social links (GitHub, LinkedIn, X/Twitter).
+- Replaced placeholder projects with DevOps-focused project entries.
+- Updated UI labels and content to match Day 2 progression.

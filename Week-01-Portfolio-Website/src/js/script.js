@@ -1,55 +1,69 @@
 const portfolioData = {
   profile: {
     name: "NIHAR LANDGE",
-    title: "ENGINEERING STUDENT | WEB DEVELOPMENT",
-    bio: "Day 1 portfolio build for industrial training 2026. This version focuses on a clean introduction, selected projects, and contact access.",
+    title: "ENGINEERING STUDENT | DEVOPS GUY",
+    bio: "Final-year Computer Science Engineering student at Sipna College of Engineering and Technology, Amravati. I focus on CI/CD, cloud-native deployments, and automation for scalable, reliable infrastructure.",
     email: "niharlandge.engr@gmail.com",
     location: "Amravati",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    avatar: "https://media.licdn.com/dms/image/v2/D5603AQGZwLFaABYfyg/profile-displayphoto-shrink_400_400/B56ZZYLBM0GoAg-/0/1745236007196?e=1772668800&v=beta&t=lhu0-ntstaWovAzAOBEYfPDyD9a62fU46ADmFlRhbdM",
     socials: {
-      github: "https://github.com",
-      linkedin: "https://linkedin.com",
-      twitter: "https://twitter.com",
-      dribbble: "https://dribbble.com"
+      github: "https://github.com/nihar-landge",
+      linkedin: "https://www.linkedin.com/in/nihar-landge/",
+      twitter: "https://x.com/landge_nihar"
     }
   },
   skills: [
-    { id: "1", name: "HTML5", level: 85, category: "frontend" },
-    { id: "2", name: "CSS3", level: 80, category: "frontend" },
-    { id: "3", name: "JavaScript", level: 75, category: "frontend" },
-    { id: "4", name: "Git / GitHub", level: 78, category: "tools" }
+    { id: "1", name: "CI/CD Pipelines", level: 86, category: "devops" },
+    { id: "2", name: "Docker", level: 84, category: "devops" },
+    { id: "3", name: "Kubernetes", level: 81, category: "devops" },
+    { id: "4", name: "AWS", level: 80, category: "devops" },
+    { id: "5", name: "Azure DevOps", level: 78, category: "devops" },
+    { id: "6", name: "Linux / Bash", level: 85, category: "tools" },
+    { id: "7", name: "GitHub Actions", level: 84, category: "tools" }
   ],
   projects: [
     {
       id: "1",
-      title: "PORTFOLIO WEBSITE - DAY 1",
-      description: "Initial structure and futuristic UI setup for training submission. Includes dashboard profile, project showcase, and contact section.",
-      category: "Training Project",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop",
-      technologies: ["HTML", "CSS", "JavaScript"],
+      title: "DevOpsified: End-to-End Cloud-Native Automation",
+      description: "Built an end-to-end cloud-native CI/CD workflow on AWS EKS with GitHub Actions, Argo CD, Helm charts, and NGINX Ingress.",
+      category: "DevOps | AWS EKS",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop",
+      technologies: ["AWS EKS", "GitHub Actions", "Argo CD", "Docker", "Helm"],
       link: "",
-      github: "https://github.com",
+      github: "https://github.com/nihar-landge/go-web-app",
       featured: true,
-      createdAt: "2026-02-17"
+      createdAt: "2026-02-16"
     },
     {
       id: "2",
-      title: "UI EXPERIMENTS",
-      description: "Small component and layout experiments used while learning interaction and responsive design.",
-      category: "Practice",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=800&fit=crop",
-      technologies: ["CSS", "Responsive UI"],
+      title: "Azure-Native DevOps: End-to-End Microservices Automation",
+      description: "Migrated and automated a multi-stack microservices application using Azure Repos, Azure Pipelines, AKS, and secure private image workflows.",
+      category: "DevOps | Azure",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=800&fit=crop",
+      technologies: ["Azure Repos", "Azure Pipelines", "AKS", "Container Security"],
       link: "",
-      github: "https://github.com",
+      github: "",
+      featured: true,
+      createdAt: "2026-02-14"
+    },
+    {
+      id: "3",
+      title: "AWS EKS Observability Project",
+      description: "Implemented an observability stack with Prometheus, Grafana, and Alertmanager on EKS for real-time Kubernetes monitoring and incident response.",
+      category: "Observability | Kubernetes",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=800&fit=crop",
+      technologies: ["Prometheus", "Grafana", "Alertmanager", "PromQL", "Trivy"],
+      link: "",
+      github: "https://github.com/nihar-landge/observability-opentelemetry-demo",
       featured: false,
-      createdAt: "2026-02-10"
+      createdAt: "2026-02-12"
     }
   ]
 };
 
 const bootLines = [
-  { text: "NIHAR_PORTFOLIO v1.0", delay: 0 },
-  { text: "WEEK-01 TRAINING BUILD", delay: 250 },
+  { text: "NIHAR_PORTFOLIO v1.1", delay: 0 },
+  { text: "WEEK-01 DAY-02 UPDATE", delay: 250 },
   { text: "INITIALIZING UI MODULES...", delay: 700 },
   { text: "LOADING PORTFOLIO DATA...", delay: 1200 },
   { text: "SYSTEM READY.", delay: 1700, success: true }
@@ -202,7 +216,7 @@ function renderDashboard() {
 }
 
 function renderSkills() {
-  const categories = ["frontend", "tools"];
+  const categories = ["devops", "tools"];
   const skillsContent = document.getElementById("skills-content");
 
   skillsContent.innerHTML = categories
@@ -322,8 +336,7 @@ function renderContact() {
   const networkIds = {
     github: "network-github",
     linkedin: "network-linkedin",
-    twitter: "network-twitter",
-    dribbble: "network-dribbble"
+    twitter: "network-twitter"
   };
 
   Object.entries(networkIds).forEach(([key, id]) => {
@@ -351,9 +364,7 @@ function getSocialIcon(key) {
     linkedin:
       '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>',
     twitter:
-      '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>',
-    dribbble:
-      '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"></path></svg>'
+      '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>'
   };
   return icons[key] || "";
 }
