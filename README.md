@@ -14,3 +14,7 @@ This repository tracks weekly submissions for industrial training tasks.
 - Week 1, Day 1: Initial portfolio website with core landing sections.
 - Week 1, Day 2: Personalized profile, real project data, and social links update.
 - Week 1, Day 3: Finalized complete portfolio with About section, accessibility polish, and production-ready documentation.
+
+## Live Demo
+
+- GitHub Pages: `https://nihar-landge.github.io/industrial-training-2026/`
