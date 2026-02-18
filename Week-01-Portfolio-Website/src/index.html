@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nihar Landge | Portfolio</title>
+  <title>Nihar Landge | DevOps Portfolio</title>
+  <meta name="description" content="Portfolio of Nihar Landge - Engineering student focused on DevOps, cloud-native automation, CI/CD, and Kubernetes projects.">
+  <meta property="og:title" content="Nihar Landge | DevOps Portfolio">
+  <meta property="og:description" content="DevOps portfolio featuring CI/CD, cloud-native automation, and Kubernetes projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D5603AQGZwLFaABYfyg/profile-displayphoto-shrink_400_400/B56ZZYLBM0GoAg-/0/1745236007196?e=1772668800&v=beta&t=lhu0-ntstaWovAzAOBEYfPDyD9a62fU46ADmFlRhbdM">
+  <meta name="theme-color" content="#040404">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <a href="#dashboard" class="skip-link">Skip to main content</a>
+
   <div class="custom-cursor" id="cursor"></div>
   <div class="custom-cursor-dot" id="cursorDot"></div>
   <div class="scanline-overlay"></div>
@@ -22,7 +30,7 @@
           <span></span>
           <span></span>
         </div>
-        <span class="terminal-title">TERMINAL v1.1</span>
+        <span class="terminal-title">TERMINAL v1.2</span>
       </div>
       <div class="terminal-content" id="terminal-content"></div>
       <div class="progress-container">
@@ -46,16 +54,17 @@
   <main id="main-content" class="main-content hidden">
     <nav class="navbar" id="navbar">
       <div class="nav-container">
-        <a href="#dashboard" class="nav-logo">
+        <a href="#dashboard" class="nav-logo" aria-label="Go to dashboard section">
           <div class="logo-box">N</div>
           <span class="logo-text">NIHAR_OS</span>
         </a>
         <div class="nav-links">
           <a href="#dashboard" class="nav-link active" data-section="dashboard">DASHBOARD</a>
+          <a href="#about" class="nav-link" data-section="about">ABOUT</a>
           <a href="#projects" class="nav-link" data-section="projects">PROJECTS</a>
           <a href="#contact" class="nav-link" data-section="contact">CONTACT</a>
         </div>
-        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
           <span></span>
           <span></span>
           <span></span>
@@ -65,6 +74,7 @@
 
     <div class="mobile-menu" id="mobile-menu">
       <a href="#dashboard" onclick="closeMobileMenu()">DASHBOARD</a>
+      <a href="#about" onclick="closeMobileMenu()">ABOUT</a>
       <a href="#projects" onclick="closeMobileMenu()">PROJECTS</a>
       <a href="#contact" onclick="closeMobileMenu()">CONTACT</a>
     </div>
@@ -73,30 +83,30 @@
       <div class="bg-grid"></div>
       <div class="container">
         <div class="dashboard-grid">
-          <div class="profile-card">
+          <article class="profile-card">
             <div class="avatar-container">
               <div class="avatar">
-                <img id="profile-avatar" src="" alt="Nihar Landge">
+                <img id="profile-avatar" src="" alt="Profile photo of Nihar Landge">
               </div>
               <div class="status-indicator">
                 <div class="status-pulse"></div>
               </div>
             </div>
             <div class="profile-info">
-              <h2 id="profile-name"></h2>
+              <h1 id="profile-name"></h1>
               <p id="profile-title" class="profile-title"></p>
             </div>
             <p id="profile-bio" class="profile-bio"></p>
             <div class="contact-info">
               <div class="contact-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
                 <span id="profile-location"></span>
               </div>
               <div class="contact-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                   <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
@@ -104,17 +114,57 @@
               </div>
             </div>
             <div class="social-links" id="social-links"></div>
-          </div>
+          </article>
 
           <div class="dashboard-main">
-            <div class="skills-card">
+            <article class="overview-card">
               <div class="card-header">
-                <h3>CORE_SKILLS</h3>
-                <span class="version">day-2</span>
+                <h2>PROFILE_OVERVIEW</h2>
+                <span class="version">final</span>
+              </div>
+              <p class="overview-text" id="summary-text"></p>
+              <div class="metrics-grid" id="metrics-grid"></div>
+            </article>
+
+            <article class="skills-card">
+              <div class="card-header">
+                <h2>CORE_SKILLS</h2>
+                <span class="version">week-01</span>
               </div>
               <div class="skills-content" id="skills-content"></div>
-            </div>
+            </article>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-divider">
+            <div class="divider-line"></div>
+            <span class="section-label">SECTION_02</span>
+            <div class="divider-line"></div>
+          </div>
+          <h2 class="section-title">ABOUT_AND_EDUCATION</h2>
+          <p class="section-desc">Academic background and core areas of interest aligned with DevOps internship responsibilities.</p>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-card">
+            <h3>EDUCATION</h3>
+            <div class="education-list" id="education-list"></div>
+          </article>
+
+          <article class="about-card">
+            <h3>FOCUS_AREAS</h3>
+            <ul class="focus-list" id="focus-list"></ul>
+          </article>
+
+          <article class="about-card">
+            <h3>TOOLCHAIN</h3>
+            <div class="chip-list" id="toolchain-list"></div>
+          </article>
         </div>
       </div>
     </section>
@@ -125,11 +175,11 @@
         <div class="section-header">
           <div class="section-divider">
             <div class="divider-line"></div>
-            <span class="section-label">SECTION_02</span>
+            <span class="section-label">SECTION_03</span>
             <div class="divider-line"></div>
           </div>
           <h2 class="section-title">PROJECT_ARCHIVE</h2>
-          <p class="section-desc">Day 2 project showcase focused on DevOps and cloud-native engineering work.</p>
+          <p class="section-desc">Selected projects showcasing cloud-native engineering, DevOps automation, and observability implementation.</p>
         </div>
         <div class="projects-grid" id="featured-projects"></div>
         <div class="projects-list" id="other-projects"></div>
@@ -142,21 +192,21 @@
         <div class="section-header">
           <div class="section-divider">
             <div class="divider-line"></div>
-            <span class="section-label">SECTION_03</span>
+            <span class="section-label">SECTION_04</span>
             <div class="divider-line"></div>
           </div>
           <h2 class="section-title">CONTACT</h2>
-          <p class="section-desc">Reach out for collaboration and project opportunities.</p>
+          <p class="section-desc">Open to DevOps internship opportunities, collaborative builds, and cloud engineering projects.</p>
         </div>
 
         <div class="contact-grid">
           <div class="contact-info-cards">
-            <div class="info-card">
+            <article class="info-card">
               <h3>DIRECT_LINE</h3>
               <div class="info-items">
-                <a id="contact-email-link" href="mailto:niharlandge.engr@gmail.com" class="info-item">
+                <a id="contact-email-link" href="mailto:niharlandge.engr@gmail.com" class="info-item" aria-label="Send email to Nihar Landge">
                   <div class="info-icon">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                       <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                       <polyline points="22,6 12,13 2,6"></polyline>
                     </svg>
@@ -168,7 +218,7 @@
                 </a>
                 <div class="info-item">
                   <div class="info-icon">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                       <circle cx="12" cy="10" r="3"></circle>
                     </svg>
@@ -179,22 +229,22 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="info-card">
+            <article class="info-card">
               <h3>NETWORKS</h3>
               <div class="networks-grid">
-                <a id="network-github" href="https://github.com/nihar-landge" target="_blank" class="network-link">
+                <a id="network-github" href="https://github.com/nihar-landge" target="_blank" rel="noopener noreferrer" class="network-link" aria-label="Open Nihar's GitHub profile">
                   <span>GITHUB</span>
                 </a>
-                <a id="network-linkedin" href="https://www.linkedin.com/in/nihar-landge/" target="_blank" class="network-link">
+                <a id="network-linkedin" href="https://www.linkedin.com/in/nihar-landge/" target="_blank" rel="noopener noreferrer" class="network-link" aria-label="Open Nihar's LinkedIn profile">
                   <span>LINKEDIN</span>
                 </a>
-                <a id="network-twitter" href="https://x.com/landge_nihar" target="_blank" class="network-link">
+                <a id="network-twitter" href="https://x.com/landge_nihar" target="_blank" rel="noopener noreferrer" class="network-link" aria-label="Open Nihar's X profile">
                   <span>X (TWITTER)</span>
                 </a>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </div>
@@ -204,7 +254,7 @@
           <div class="footer-content">
             <div class="footer-brand">
               <div class="logo-box">N</div>
-              <span class="footer-version">NIHAR_PORTFOLIO day-2</span>
+              <span class="footer-version">NIHAR_PORTFOLIO week-01 final</span>
             </div>
             <div class="footer-copy">&copy; 2026 Nihar Landge. All rights reserved.</div>
           </div>

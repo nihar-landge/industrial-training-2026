@@ -1,23 +1,35 @@
-# Technical Documentation - Week 01 (Day 1 + Day 2)
+# Technical Documentation - Week 01 Portfolio Website
 
 ## Objective
 
-Build and submit the Day 1 version of a portfolio website for training.
+Build and finalize a professional single-page portfolio website for training submission, using only HTML, CSS, and Vanilla JavaScript.
 
-## Implemented Features
+## Final Feature Set
 
-1. Boot screen with loading animation and entry button.
-2. Responsive dashboard with profile and skill summary.
-3. Project archive with featured and secondary project cards.
-4. Contact section with direct email, location, and social links.
-5. Mobile menu and scroll-based active navigation state.
+1. Boot/entry sequence with terminal-style loading experience.
+2. Responsive dashboard with profile, social links, summary, metrics, and skill matrix.
+3. About section with education timeline, focus areas, and toolchain tags.
+4. Projects section with featured cards, outcomes, highlights, and source links.
+5. Contact section with direct email, location, and social network links.
 
-## Deliberately Excluded in Day 1
+## Implementation Notes
 
-- Admin login and admin panel.
-- Timeline/experience section.
-- Message form submission and persistence logic.
-- localStorage-based content management.
+- Data-driven rendering is handled in `src/js/script.js` through a structured `portfolioData` object.
+- Section content is generated dynamically (skills, education, projects, contact links).
+- Visual style is maintained with a futuristic black/green theme and responsive layout.
+- Azure-based project is intentionally shown without GitHub source link (platform-specific work).
+
+## Accessibility and UX
+
+- Added keyboard-visible focus states.
+- Added skip link for keyboard navigation.
+- Added semantic heading flow and improved alt/aria labels.
+- Added reduced-motion support for users with motion preferences.
+
+## SEO and Metadata
+
+- Added meta description and Open Graph tags in `src/index.html`.
+- Added theme color and improved page title metadata.
 
 ## Tech Stack
 
@@ -25,15 +37,12 @@ Build and submit the Day 1 version of a portfolio website for training.
 - CSS3
 - Vanilla JavaScript
 
-## Notes
+## Development Progress
 
-- Data is currently static and curated for initial submission.
-- The project is structured for incremental weekly updates.
+- Day 1: Base architecture and initial landing implementation.
+- Day 2: Real profile/social/project data integration.
+- Day 3: Full project completion, accessibility polish, and documentation finalization.
 
-## Day 2 Enhancements
+## Status
 
-1. Replaced temporary profile data with personal details and real social links.
-2. Updated profile role and bio for DevOps-focused positioning.
-3. Replaced sample projects with real project entries from training portfolio work.
-4. Kept Azure-based project without GitHub source link as it was executed on Azure DevOps platform.
-5. Updated UI copy and footer/version tags from Day 1 to Day 2.
+- Week 01 Portfolio Website: Completed and ready for submission.
