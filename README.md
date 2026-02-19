@@ -17,8 +17,5 @@ This repository tracks weekly submissions for industrial training tasks.
 
 ## Live Demo
 
-- Project Hub: `https://nihar-landge.github.io/industrial-training-2026/`
-- Week 01: `https://nihar-landge.github.io/industrial-training-2026/Week-01-Portfolio-Website/`
-- Week 02: `https://nihar-landge.github.io/industrial-training-2026/Week-02-Task-Name/`
-- Week 03: `https://nihar-landge.github.io/industrial-training-2026/Week-03-Task-Name/`
-- Week 04: `https://nihar-landge.github.io/industrial-training-2026/Week-04-Task-Name/`
+- Main Link (Week 01): `https://nihar-landge.github.io/industrial-training-2026/`
+- Direct Week 01 Link: `https://nihar-landge.github.io/industrial-training-2026/Week-01-Portfolio-Website/`
