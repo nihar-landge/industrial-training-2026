@@ -476,6 +476,7 @@ img {
   box-shadow: 0 0 12px rgba(0, 245, 143, 0.9);
 }
 
+.profile-info h1,
 .profile-info h2 {
   margin-bottom: 0.2rem;
   font-size: 1.45rem;
@@ -530,6 +531,28 @@ img {
 .social-link:hover {
   color: var(--accent);
   border-color: var(--accent);
+}
+
+.profile-actions {
+  margin-top: 0.9rem;
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.resume-btn:hover {
+  color: #000;
+  background: var(--accent);
 }
 
 .dashboard-main {

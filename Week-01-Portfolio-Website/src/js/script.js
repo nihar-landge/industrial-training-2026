@@ -9,6 +9,7 @@ const portfolioData = {
     location: "Amravati, Maharashtra",
     avatar:
       "https://media.licdn.com/dms/image/v2/D5603AQGZwLFaABYfyg/profile-displayphoto-shrink_400_400/B56ZZYLBM0GoAg-/0/1745236007196?e=1772668800&v=beta&t=lhu0-ntstaWovAzAOBEYfPDyD9a62fU46ADmFlRhbdM",
+    resumeUrl: "https://www.linkedin.com/in/nihar-landge/",
     socials: {
       github: "https://github.com/nihar-landge",
       linkedin: "https://www.linkedin.com/in/nihar-landge/",
@@ -293,6 +294,11 @@ function renderDashboard() {
     `
     )
     .join("");
+
+  const resumeLink = document.getElementById("resume-link");
+  if (resumeLink) {
+    resumeLink.href = profile.resumeUrl || profile.socials.linkedin || "#";
+  }
 
   renderSkills();
 }
